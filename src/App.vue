@@ -6,6 +6,8 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const baseURL = import.meta.env.BASE_URL
+
 const mainRef = ref()
 const lottieRef = ref()
 
@@ -15,7 +17,7 @@ onMounted(() => {
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: '/bloom.json'
+    path: baseURL + '/bloom.json'
   });
 
   ScrollTrigger.create({
@@ -29,7 +31,6 @@ onMounted(() => {
     } 
   })
 })
-
 </script>
 
 <template>
